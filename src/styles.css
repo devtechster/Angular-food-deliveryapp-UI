@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+.container {
+  margin-top: 10px;
+}
+
+body {
+  font-family: "Arvo", serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  text-align: center;
+  /* background-color: rgb(246, 118, 13) !important; */
+  background-color: rgb(52, 170, 248) !important;
+
+}

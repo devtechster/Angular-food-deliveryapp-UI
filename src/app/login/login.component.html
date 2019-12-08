@@ -1,0 +1,42 @@
+<div class="login-form">
+  <h3>{{!isRegistered ? 'Login' : 'Register'}}</h3>
+  <hr />
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" class="form-control" formControlName="email" />
+      <div *ngIf="!loginForm.get('email').valid && (loginForm.get('email').dirty || loginForm.get('email').touched)"
+        class="alert alert-danger alert-box" role="alert">
+        Email is not valid
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" class="form-control" formControlName="password" />
+      <div
+        *ngIf="!loginForm.get('password').valid && (loginForm.get('password').dirty || loginForm.get('password').touched)"
+        class="alert alert-danger alert-box" role="alert">
+        Password is invalid
+      </div>
+    </div>
+    <div *ngIf="!isRegistered; else signUp">
+      <br><br>
+
+      <button class="btn btn-primary" type="submit">Login</button>
+      <br><br>
+      <a class="p-2" (click)="toggleIsRegistered()">Don't have an account? Sign
+        Up!</a>
+    </div>
+    <ng-template #signUp>
+      <br><br>
+
+      <button class="btn btn-primary" type="submit">Register</button>
+      <br><br>
+      <a class="p-2" (click)="toggleIsRegistered()">Already have an account? Sign
+        in!</a>
+    </ng-template>
+  </form>
+  <div *ngIf="errMessage.length !== 0" class="alert alert-danger" role="alert">
+    {{ errMessage }}
+  </div>
+</div>

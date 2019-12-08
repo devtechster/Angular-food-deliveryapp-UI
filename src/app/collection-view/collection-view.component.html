@@ -1,0 +1,13 @@
+<div class="text-center">
+  <br><br>
+  <hr>
+  <h2 class="cen">Explore {{ restaurantsService.cityName }}'s top Restaurants </h2>
+</div>
+<br>
+<hr>
+<br><br>
+<div class="card-deck">
+  <app-restaurant-card class="singlecard" [restaurant]="restaurant"
+                       *ngFor="let restaurant of restaurantsService.restaurants">
+  </app-restaurant-card>
+</div>
