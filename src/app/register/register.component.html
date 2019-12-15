@@ -1,0 +1,35 @@
+<div class="login-form">
+    <h3>Register</h3>
+    <hr>
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" class="form-control" formControlName="email" />
+        <div *ngIf="!registerForm.get('email').valid && (registerForm.get('email').dirty || registerForm.get('email').touched)"
+          class="alert alert-danger alert-box" role="alert">
+          Email is not valid
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" class="form-control" formControlName="password" />
+        <div
+          *ngIf="!registerForm.get('password').valid && (registerForm.get('password').dirty || registerForm.get('password').touched)"
+          class="alert alert-danger alert-box" role="alert">
+          Password is invalid
+        </div>
+      </div>
+      <div>
+        <br><br>
+        <button [disabled]="!registerForm.valid" (click)="register()" class="btn btn-primary" type="submit">Register</button>
+        <br><br>
+        <a class="p-2" routerLink="/login">Already have an account? SignIn!</a>
+      </div>
+    </form>
+
+    <div *ngIf="errMessage.length !== 0" class="alert alert-danger" role="alert">
+      {{ errMessage }}
+    </div>
+
+</div>

@@ -10,7 +10,13 @@ export class RouterService {
     goToHomePage() {
         this.router.navigate(['']);
     }
+    
     goToLoginPage() {
         this.router.navigate(['login']);
+    }
+
+    goToRegisterPage()
+    {
+        this.router.navigate(['register']);
     }
 }

@@ -18,12 +18,14 @@
       </li>
     </ul>
   </div>
-  <div>
+  <div >
     <form class="form-inline my-2 my-lg-0" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
       <input class="form-control mr-sm-2" type="search" placeholder="Search Your City here" aria-label="Search"
              formControlName="searchField">
-      <button routerLink="/" (click)="onLogout()"
-      mat-raised-button color="primary" type="submit">Logout</button>
     </form>
+  </div>
+  <div> 
+  <button routerLink="/" (click)="onLogout()"
+    mat-raised-button *ngIf="authService.isLoggedIn" color="primary" type="submit">Logout</button>
   </div>
 </nav>

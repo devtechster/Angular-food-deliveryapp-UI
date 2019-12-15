@@ -22,12 +22,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { FavouritesComponent } from './favourites/favourites.component';
 import { AuthGuardGuard } from './auth-guard.guard';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   { path: '', component: CollectionViewComponent },
   { path: 'login', component: LoginComponent },
   { path: 'favourites', component: FavouritesComponent, canActivate: [AuthGuardGuard] },
-  // { path: 'profile', component: ProfileComponent, canActivate: [AuthGuardGuard] }
+  { path: 'register', component:RegisterComponent  }
 ]
 
 @NgModule({
@@ -37,7 +38,8 @@ const routes: Routes = [
     RestaurantCardComponent,
     HeaderComponent,
     LoginComponent,
-    FavouritesComponent
+    FavouritesComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

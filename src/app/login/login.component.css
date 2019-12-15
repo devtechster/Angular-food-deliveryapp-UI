@@ -1,13 +1,11 @@
-.login-form {
+.login-form 
+{
   border: 1px solid ;
   padding: 100px;
+  background-color: rgb(64, 62, 75);
+  color: antiquewhite;
+
 }
 a:hover {
   cursor: pointer;
-}
-
-.login-form
-{
-  background-color: rgb(64, 62, 75);
-  color: antiquewhite;
 }

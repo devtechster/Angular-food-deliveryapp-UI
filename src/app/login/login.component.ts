@@ -26,14 +26,15 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.loginForm = new FormGroup({
       email: new FormControl(null, [Validators.required, Validators.email]),
-      password: new FormControl(null, [Validators.required, Validators.minLength(6)])
+      password: new FormControl(null, [Validators.required, Validators.minLength(5)])
     });
   }
 
   onSubmit() {
     this.user.email = this.loginForm.get('email').value;
     this.user.password = this.loginForm.get('password').value;
-    if (!this.isRegistered) {
+    if (!this.isRegistered) 
+    {
       this.authService.authenticateUser().subscribe(
         data => {
           const userData = data.find(u => (u.email === this.user.email) && (u.password === this.user.password));
@@ -43,22 +44,24 @@ export class LoginComponent implements OnInit {
             this.userService.user = userData;
             this.routerService.goToHomePage();
           } else {
-            this.errMessage = `The user with email ${this.user.email} does not exists in our database. Please register first!`
+            this.errMessage = `This ${this.user.email} email is Invalid. 
+            Please register.`
           }
         }, error => this.errMessage = error.message
       );
-      // this.authService.setBearerToken(userData.email);
-    } else {
+   }
+   
+   else {
       this.authService.registerUser(this.user).subscribe(
         data => console.log(data),
         error => this.errMessage = error.message
       );
     }
-    this.toggleIsRegistered();
+    // this.toggleIsRegistered();
   }
 
-  toggleIsRegistered() {
-    this.isRegistered = !this.isRegistered;
-  }
+  // toggleIsRegistered() {
+  //   this.isRegistered = !this.isRegistered;
+  // }
 
 }

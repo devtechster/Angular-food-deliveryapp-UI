@@ -1,0 +1,26 @@
+.card {
+    height: 450px;
+    text-align: center;
+    margin-bottom: 5px;
+    box-shadow: 0px 0px 20px black;
+    /* box-shadow: 0px 0px 20px whitesmoke; */
+  
+    /* border: 1px solid white; */
+    background-color: black;
+  }
+  
+  .card-title , .card-text
+  {
+    color: antiquewhite;
+    text-decoration-color: black;
+    
+  }
+  
+  .card-img-top {
+    height: 200px;
+  }
+  
+  a {
+    color: white;
+  }
+  

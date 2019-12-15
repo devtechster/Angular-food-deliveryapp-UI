@@ -1,65 +1,49 @@
 {
   "users": [
     {
-      "email": "basakbitan@gmail.com",
-      "password": "password",
-      "favourites": [
-        {
-          "name": "Shanmukha",
-          "cuisines": "Biryani, North Indian, Andhra, Chinese",
-          "featuredImage": "https://b.zmtcdn.com/data/pictures/5/52015/9a51034cd073de83a84ef133fe0b1945.jpg"
-        },
-        {
-          "name": "The Bier Library",
-          "cuisines": "Continental, North Indian, Pizza, BBQ",
-          "featuredImage": "https://b.zmtcdn.com/data/pictures/9/18843699/87bf822f84f8cf65aa4b7095099ef33b.jpg"
-        }
-      ],
-      "id": 1
+      "id": 1,
+      "email": "adhiraj@gmail.com",
+      "password": "12345",
+      "favourites": []
     },
     {
       "id": 2,
-      "email": "basakbitan@outlook.com",
-      "password": "123456",
+      "email": "user@gmail.com",
+      "password": "12345",
       "favourites": []
     },
     {
       "id": 3,
-      "email": "adhiraj@gmail.com",
-      "password": "password",
+      "email": "user2@gmail.com",
+      "password": "12345",
       "favourites": []
     },
     {
       "id": 4,
-      "email": "pragati@gmail.com",
-      "password": "password",
-      "favourites": [
-        {
-          "name": "AB's - Absolute Barbecues",
-          "cuisines": "European, Mediterranean, North Indian, BBQ",
-          "featuredImage": "https://b.zmtcdn.com/data/pictures/8/56618/d1fabc4669318bc940749ff735359327.jpg"
-        },
-        {
-          "name": "The Reservoire",
-          "cuisines": "Continental, North Indian, Chinese, American, Italian, Desserts",
-          "featuredImage": "https://b.zmtcdn.com/data/pictures/5/18537585/a6ddff34ec4460d510da5de7bce96cb6.jpg"
-        },
-        {
-          "name": "Brahma Brews",
-          "cuisines": "Bar Food, Asian, Italian, North Indian, South Indian",
-          "featuredImage": "https://b.zmtcdn.com/data/pictures/6/18853706/9b437dc670e7284a99e1ab9cfc8b2703.jpg"
-        }
-      ]
+      "email": "user3@gmail.com",
+      "password": "12345",
+      "favourites": []
     },
     {
       "id": 5,
-      "email": "triporna@gmail.com",
-      "password": "qazwsx",
+      "email": "user6@gmail.com",
+      "password": "123456",
+      "favourites": []
+    },
+    {
+      "id": 6,
+      "email": "demo@gmail.com",
+      "password": "12345d",
       "favourites": [
         {
-          "name": "Sukkubhai Biriyani",
-          "cuisines": "Biryani, North Indian",
-          "featuredImage": "https://b.zmtcdn.com/data/reviews_photos/cfe/6cdb58c8e498a6d72834db8fb94c4cfe_1575231448.jpg"
+          "name": "The Big Barbeque",
+          "cuisines": "North Indian, Continental, Chinese, Pizza, Fast Food, Desserts",
+          "featuredImage": "https://b.zmtcdn.com/data/pictures/1/19203051/a66fd8c5fb943a2e8e7f425a681b969d.jpeg"
+        },
+        {
+          "name": "Hoot",
+          "cuisines": "Continental, Italian, North Indian",
+          "featuredImage": "https://b.zmtcdn.com/data/pictures/8/18422898/00b78b92b626c82c3c711d79f1e3188e.jpg"
         }
       ]
     }
